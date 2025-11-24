@@ -6,10 +6,12 @@
 ```
 oak_depth_calibration/
 ├── oak_align_standard_depthaiSDK.py    # 利用官方SDK接口,完成参数设置
-├── oak_align_standard_combine.py       # 综合利用SDK api接口，优化效果最理想
+├── oak_align_standard_combine.py       # 综合利用SDK api接口
 ├── oak_align_standard_depthai.py       # 利用官方api接口,在底层node完成参数设置
 └── README.md                           # 项目说明文档
 ```
+综合利用SDK api接口的优化效果是最理想的，如果需要对特定的情景进行调参，直接在
+oak_align_standard_combine.py 的参数列表中进行修改
 
 ## 功能特性
 
@@ -156,8 +158,7 @@ stereo_node.setPostProcessingHardwareResources(
 
 ## 参考资料
 
-- [DepthAI官方文档]([https://docs.luxonis.com/](https://docs.luxonis.com/software/))
-- 
+- [DepthAI官方文档]([https://docs.luxonis.com/software/])
 
 
 **作者**: VAN
