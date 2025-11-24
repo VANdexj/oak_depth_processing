@@ -6,12 +6,19 @@
 ```
 oak_depth_calibration/
 ├── oak_align_standard_depthaiSDK.py    # 利用官方SDK接口,完成参数设置
-├── oak_align_standard_combine.py       # 综合利用SDK api接口
+├── oak_align_standard_combine.py       # 利用SDK api接口，共同完成
 ├── oak_align_standard_depthai.py       # 利用官方api接口,在底层node完成参数设置
 └── README.md                           # 项目说明文档
 ```
-综合利用SDK api接口的优化效果是最理想的，如果需要对特定的情景进行调参，直接在
-oak_align_standard_combine.py 的参数列表中进行修改
+**API 接口**
+
+该API 接口具备强大的参数配置，支持所有参数的自定义设置，同时提供了当前最丰富的滤波器种类选择，能够满足复杂场景下的精准处理需求。但是，由于参数存在功能关联，不同参数的配置组合容易引发冲突，导致异常。
+
+**SDK 接口说明**
+
+SDK 接口的使用简洁直观，即可快速完成配置与部署。缺点是可配置的参数范围有限，仅支持基础调节，无法实现精细化的参数定制
+
+**同时利用SDK api接口的优化效果是最理想的，如果需要对特定的情景进行调参，直接在oak_align_standard_combine.py 的参数列表中进行修改**
 
 ## 功能特性
 
@@ -51,7 +58,8 @@ stereo.setLeftRightCheck(True)
 **原理**: 验证左右视差图的一致性，过滤错误匹配
 - **True**: 提高深度图精度，增加计算量
 - **False**: 减少计算量，可能包含更多错误
-实际在调参过程中对结果的影响很小
+  
+**实际在调参过程中对结果的影响很小**
 
 #### 3. 扩展视差 (Extended Disparity)
 ```python
