@@ -14,19 +14,17 @@ oak_depth_calibration/
 ## 功能特性
 
 ### SDK增强版深度发布器 (oak_align_standard_combine.py)
-- **ROS 2集成**: 通过ROS 2节点发布深度数据
-- **高级参数配置**: 支持多种滤波和校准参数
-- **WLS滤波**: 支持加权最小二乘滤波
+- **ROS 2支持**: 通过ROS 2节点发布深度数据
+- **参数配置**: 支持多种滤波和校准参数
 - **硬件优化**: 可配置硬件资源分配
-- **多话题发布**: 发布原始深度图、彩色深度图、视差图等
+- **多话题发布**: 发布原始深度图、彩色深度图、视差图
 
 ### 简化版深度发布工具 (oak_align_standard_depthai.py)
 - **轻量级实现**: 简化的深度数据采集和发布
 - **ROS 2支持**: 基础的ROS 2节点功能
-- **数据保存**: 保存原始深度数据
 
 **发布的话题**:
-- `/camera/depth/image_raw` - 原始深度图 (16位)
+- `/camera/depth/image_raw` - 原始深度图
 - `/camera/color/image_raw` - 彩色图像
 - `/camera/depth/colormap` - 彩色化深度图
 - `/camera/disparity` - 视差图
